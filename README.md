@@ -40,6 +40,7 @@ This plot shows the distribution in the durations of power outages. We can see t
 | 10 | 0.29 | 0.38 | 0.34 |
 | 11 | 0.36 | 0.40 | 0.24 |
 | 12 | 0.41 | 0.23 | 0.36 |
+
 In this pivot table, you can see the distribtion of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher porportion of power outages. The number of power outages in the warm climate region vary a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterzied by their severe weather while warm climate areas arent characterized by such varying weather and thus have less varying power outage proportions.
 
 
