@@ -44,12 +44,20 @@ This plot shows the distribution in the durations of power outages. We can see t
 In this pivot table, you can see the distribtion of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher porportion of power outages. The number of power outages in the warm climate region vary a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterzied by their severe weather while warm climate areas arent characterized by such varying weather and thus have less varying power outage proportions.
 
 
-
 ### Assessment of Missingness
 I believe that there are columns in this dataset that could be considered NMAR due to this dataset focusing on the collection of power outage data for major power outages, particularly the total number of customers that were affected due to power outages. This is why the missing values in the "CUSTOMERS.AFFECTED" column are NMAR since the values that are missing likely aren't recorded because the actual value itself is too small. Additional data I might want to obtain to explain the missingness (making it MAR) could be a column that details whether the power outage is categorized as a "Major Power Outage" or a "Non-Major Power Outage", since that way you could say the missingness depends on the other column making it MAR.
 
 
 ### Hypothesis Testing
+Null: Power outages are not restored more quickly in economically robust areas
+
+Alternative: Power outages are restored more quickly in economically robust areas
+
+Test statistic: Difference in group means
+
+Signficance level: a=0.05
+
+Since the p-value is 0.086, which is greater than the previously set significance level of 0.05, we fail to reject the null hypothesis that power outages are not restored more quickly in economically robust areas.
 
 
 ### Framing a Prediction Problem
