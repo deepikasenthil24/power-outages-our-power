@@ -54,6 +54,7 @@ Null: Power outages are not restored more quickly in economically robust areas
 Alternative: Power outages are restored more quickly in economically robust areas
 
 Test statistic: Difference in group means
+ This test staistic is the best since the two distributions (the restoration times for power outages in economically robust areas and the restoration times for power outages in non-economically robust areas) are numerical. Since the two graphed distributions are roughly the same shape, Kolmogorov-Smirnov test statistic would be an inappropriate choice, and so difference in group means is an appropriate statistic.
 
 Signficance level: a=0.05
 
