@@ -1,6 +1,4 @@
 # Power Outages: An Investigation into What's Really in Our Power
- This is a project for DSC80 at UCSD in which I will be cleaning my dataset, performing exploratory data analysis, assessing missingness, conducting permutation tests, creating a classification model, and judging fairness.
-
  **By** Deepika Senthil
 
 <!-- oh...m -->
