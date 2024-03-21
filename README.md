@@ -1,3 +1,4 @@
+
 # Power Outages: An Investigation into What's Really in Our Power
  This is a project for DSC80 at UCSD in which I will be cleaning my dataset, performing exploratory data analysis, assessing missingness, conducting permutation tests, creating a classification model, and judging fairness.
 
@@ -19,7 +20,6 @@ INSERT IN DF HEAD
   height="600"
   frameborder="0"
 ></iframe>
-
 This plot shows the distrbution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
 
 <iframe
@@ -28,6 +28,21 @@ This plot shows the distrbution of the causes of power outages in the dataset. M
   height="600"
   frameborder="0"
 ></iframe>
+This plot shows the distribution in the durations of power outages. We can see that most power outages last less than 20k minutes (less than 14 days), but this plot also emphasizes the presense of many outliers in outage durations that should be kept in mind and/or investigated further
+
+| CLIMATE.CATEGORY | cold | normal | warm |
+|--------|-------|------|-------|
+| MONTH |       |      |       |
+| 1 | 0.59 | 0.19 | 0.22 |
+| 2 | 0.68 | 0.19 | 0.14 |
+| 3 | 0.19 | 0.51 | 0.30 |
+| ... | ... | ... | ... |
+| 10 | 0.29 | 0.38 | 0.34 |
+| 11 | 0.36 | 0.40 | 0.24 |
+| 12 | 0.41 | 0.23 | 0.36 |
+In this pivot table, you can see the distribtion of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher porportion of power outages. The number of power outages in the warm climate region vary a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterzied by their severe weather while warm climate areas arent characterized by such varying weather and thus have less varying power outage proportions.
+
+
 
 ### Assessment of Missingness
 I believe that there are columns in this dataset that could be considered NMAR due to this dataset focusing on the collection of power outage data for major power outages, particularly the total number of customers that were affected due to power outages. This is why the missing values in the "CUSTOMERS.AFFECTED" column are NMAR since the values that are missing likely aren't recorded because the actual value itself is too small. Additional data I might want to obtain to explain the missingness (making it MAR) could be a column that details whether the power outage is categorized as a "Major Power Outage" or a "Non-Major Power Outage", since that way you could say the missingness depends on the other column making it MAR.
