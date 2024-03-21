@@ -22,6 +22,13 @@ INSERT IN DF HEAD
 
 This plot shows the distrbution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
 
+<iframe
+  src="assets/xillis_count2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ### Assessment of Missingness
 I believe that there are columns in this dataset that could be considered NMAR due to this dataset focusing on the collection of power outage data for major power outages, particularly the total number of customers that were affected due to power outages. This is why the missing values in the "CUSTOMERS.AFFECTED" column are NMAR since the values that are missing likely aren't recorded because the actual value itself is too small. Additional data I might want to obtain to explain the missingness (making it MAR) could be a column that details whether the power outage is categorized as a "Major Power Outage" or a "Non-Major Power Outage", since that way you could say the missingness depends on the other column making it MAR.
 
