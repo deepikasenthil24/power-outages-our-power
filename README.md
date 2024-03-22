@@ -72,6 +72,7 @@ At the time of your prediction, you know the "PC.REALGSP.STATE","TOTAL.SALES","N
 
 
 ### Baseline Model
+My model uses a RandomForestClassifier of max_depth=2 and criterion='entropy' in order to make my classification. A ColumnTransformer is used in order to make transformations in a single pipeline. My model has 2 features "PCT_WATER_TOT" and "NERC.REGION" which are used in order to make my classifications. "PCT_WATER_TOT" is quantitatuve, while "NERC.REGION" is nominal, while is why I had to HotOneEncode it inside the column transformer and I could just passthrough "PCT_WATER_TOT". My mode did not perform too well, as it had a training accuracy of 0.5664845173041895 and a testing accuracy of 0.5382513661202186. My model is good in that my testing acciuracy wasn't too far off from my training accuracy. However, I believe my current model could be better since it is only based on 2 features and a complex problem like multiclass classification should involve more of a broad spectrum of features.
 
 ### Final Model
 
