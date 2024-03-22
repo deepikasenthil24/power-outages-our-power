@@ -57,6 +57,13 @@ In this pivot table, you can see the distribtion of the number of power outages 
 ### Assessment of Missingness
 I believe that there are columns in this dataset that could be considered NMAR due to this dataset focusing on the collection of power outage data for major power outages, particularly the total number of customers that were affected due to power outages. This is why the missing values in the "CUSTOMERS.AFFECTED" column are NMAR since the values that are missing likely aren't recorded because the actual value itself is too small. Additional data I might want to obtain to explain the missingness (making it MAR) could be a column that details whether the power outage is categorized as a "Major Power Outage" or a "Non-Major Power Outage", since that way you could say the missingness depends on the other column making it MAR.
 
+
+<iframe
+  src="assets/xillis_count3.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 After performing a permutation test to see if the missing values in "Hurricanes" depends on "IND.SALES", I got a p-value of 0.114 while is greater than my set significance level of 0.05 and so it signifies that the missingness does not depend on the "IND.SALES". Above is a KDE plot representing the distrubution of IND.SALES when the hurrican name is missing and the distribution when it's not. Since the two graphs are different shapes, a Kolmogorov–Smirnov test statistic should be used!
 
 
