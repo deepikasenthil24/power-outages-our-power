@@ -91,49 +91,17 @@ The modeling algorithm I chose is once again using a RandomForestClassifier to p
 
 
 ### Fairness Analysis
+Let's now test this final model for fairness!
 
-<!-- # My Project Title
+Group X: the industrial sector's electricity consumption that is lower (less than 2914897)
+Group Y: the industrial sector's electricity consumption that is higher (greater than or equal to 2914897)
+Evaluation metric: Accuracy
 
-by Suraj Rampure (rampure@ucsd.edu)
+Null Hypothesis: The model performs the same for the industrial sector's electricity consumption that is higher (greater than or equal to 2914897) and low (less than 2914897).
+   
+Alternative Hypothesis: The model performs worse for the industrial sector's electricity consumption that is higher (greater than or equal to 2914897) than the industrial sector's electricity consumption that is lower (less than 2914897).
 
-***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
+Significance Level: 0.05
+Test statistic: Difference of Group Means
 
----
-
-## Introduction
-
-In this project, we studied the effectiveness of spice challenges in building team morale.
-
----
-
-## Cleaning and EDA
-
-<iframe src="assets/10-80-enrollment.html" width=800 height=600 frameBorder=0></iframe>
-
----
-
-## Assessment of Missingness
-
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
-
-```py
-print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
-```
-
-| Quarter     |   Count |
-|:------------|--------:|
-| Fall 2020   |       3 |
-| Winter 2021 |       2 |
-| Spring 2021 |       6 |
-| Summer 2021 |       4 |
-| Fall 2021   |      55 |
-
----
-
-## Hypothesis Testing
-
-' px.scatter(x=inputd["POPDEN_RURAL"], y=inputd["OUTAGE.DURATION"], title='OUTAGE DURATION for Rural Populatin Densities', labels={'x': 'Rural Population Density', 'y': 'Power Outage Duration'})''
-'fig.write_html('file-name.html', include_plotlyjs='cdn')'
-
-
---- -->
+Since the resulting p_value of 0.102 is greater than 0.05, we cannot reject the null hypothesis that the model performs the same for higher electricity consumption by the industrial sector and lower electricity consumption by the industrial sector.
