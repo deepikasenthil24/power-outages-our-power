@@ -62,6 +62,13 @@ Since the p-value is 0.086, which is greater than the previously set significanc
 
 
 ### Framing a Prediction Problem
+Prediction problem: Predict the cause of a major power outage.
+Prediction Type: Classification (Multiclass Classification)
+Response variable: "CAUSE.CATEGORY" which I chose since when you are experiencing a power outage, the only thing on your mind in the rush of the moment is what's happeneing and why, and so being able to most accurately predict the cause can be a huge relief to people.
+
+The metric you are using to evaluate your model: Accuracy, since in the heat of a power outage, recall isn't a necessity but rather accurracy and trying to get the model to predict the correct CAUSE.CATEGORTY as often as possible.False positives or false negatives don't have an overweighing impact, simply getting the answer and the being as close as possible is the necessty.
+
+At the time of your prediction, you know the "PC.REALGSP.STATE","TOTAL.SALES","NERC.REGION","PCT_WATER_TOT," so these are all relevant predictors. I wanted to use "OUTAGE.DURATION" as a predictor but the outage duration is not information that would be known at the time of the prediction so it cannot be used as one of our classification predictor
 
 
 ### Baseline Model
