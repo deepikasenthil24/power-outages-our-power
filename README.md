@@ -12,7 +12,17 @@ The dataset that is going to be analyzed is the "Major Power Outage Risks in the
 
 ### Data Cleaning and Exploratory Data Analysis
 The data cleaning process is necessary to ensure a proper analysis. I first removed rows and columns with information other than the data recorded of the characteristics of the outages. I then created two new columns ('OUTAGE.START' and 'OUTAGE.RESTORATION') using the 'OUTAGE.START.DATE' column with the 'OUTAGE.START.TIME' column as well as the 'OUTAGE.RESTORATION.DATE' column with the 'OUTAGE.RESTORATION.TIME' column respectively, converting to Timedelta and TimeStamps to do so. Using these new columns, I then filled in the missing values of the "OUTAGE.DURATION" columns with the difference between the 'OUTAGE.START' and 'OUTAGE.RESTORATION' columns. I then removed columns that were irrelevant to my analysis, keeping ones that might be relevant later on, however. Finally, I created a new column "robust" that contains a value of 1 if the "PC.REALGSP.STATE" is greater than 60000, 0 otherwise, to represent whether a state is economically robust or not. The value of 60000 as a marker of economic robustness was obtained from US News' ranking of the best state economies.
-INSERT IN DF HEAD
+
+ | MONTH | NERC.REGION | CLIMATE.CATEGORY | OUTAGE.START.DATE | ... | PCT_WATER_TOT | OUTAGE.START | OUTAGE.RESTORATION | robust |
+|------|------|------|------|------|------|------|------|------|-------|
+0   | 7   | MRO   | normal   | 2011-07-01 00:00:00   | ...   | 8.41   | 2011-07-01 17:00:00	   | 2011-07-03 20:00:00   | 0    |
+1   | 5   | MRO   | normal   | 2014-05-11 00:00:00   | ...   | 8.41   | 2014-05-11 18:38:00   | 2014-05-11 18:39:00	   | 0    |
+2   | 10   | MRO   | cold   | 2010-10-26 00:00:00   | ...   | 8.41   | 2010-10-26 20:00:00   | 2010-10-28 22:00:00	   | 0    |
+...   | ...   | ...   | ...   | ...   | ...   | ...   | ...   | ...   | 0    |
+1473  | 12   | MRO   | cold   | 2011-12-06 00:00:00   | ...   | 2.4   | 2011-12-06 08:00:00   | 2011-12-06 20:00:00   | 0    |
+1474   | 8   | RFC   | warm   | 2009-08-29 00:00:00   | ...   | 1.69   | 2009-08-29 22:54:00   | 2009-08-29 23:53:00   | 0    |
+1475   | 8   | MRO   | warm   | 2009-08-29 00:00:00   | ...   | 1.69   | 2009-08-29 11:00:00   | 2009-08-29 14:01:00   | 0    |
+
 
 <iframe
   src="assets/xillis_count.html"
