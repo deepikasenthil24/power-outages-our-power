@@ -54,7 +54,7 @@ This plot shows the distribution in the durations of power outages. We can see t
 |      11 | 0.355556  | 0.4      | 0.244444  |
 |      12 | 0.40625   | 0.234375 | 0.359375  |
 
-In this pivot table, you can see the distribtion of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher porportion of power outages. The number of power outages in the warm climate region vary a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterzied by their severe weather while warm climate areas arent characterized by such varying weather and thus have less varying power outage proportions.
+In this pivot table, you can see the distribution of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher proportion of power outages. The number of power outages in the warm climate region varies a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterized by their severe weather while warm climate areas aren't characterized by such varying weather and thus have less varying power outage proportions.
 
 
 ### Assessment of Missingness
@@ -75,7 +75,7 @@ Alternative hypothesis: Missingness in hurr_name_missing does depend on the IND.
 
 Significance level: 0.05
 
-After performing a permutation test to see if the missing values in "Hurricanes" depends on "IND.SALES", I got a p-value of 0.114, which is greater than my set significance level of 0.05, so I fail to reject my null hypothesis, which signifies that the missingness does not depend on the "IND.SALES". Above is a KDE plot representing the distrubution of IND.SALES when the hurricane name is missing and the distribution when it's not. Since the two graphs are different shapes, a Kolmogorov–Smirnov test statistic should be used!
+After performing a permutation test to see if the missing values in "Hurricanes" depend on "IND.SALES", I got a p-value of 0.114, which is greater than my set significance level of 0.05, so I fail to reject my null hypothesis, which signifies that the missingness does not depend on the "IND.SALES". Above is a KDE plot representing the distribution of IND.SALES when the hurricane name is missing and the distribution when it's not. Since the two graphs are different shapes, a Kolmogorov–Smirnov test statistic should be used!
 
 
 ### Hypothesis Testing
@@ -83,11 +83,12 @@ Null: Power outages are not restored more quickly in economically robust areas
 
 Alternative: Power outages are restored more quickly in economically robust areas
 
-Test statistic: Difference in group means <- this test staistic is the best since the two distributions (the restoration times for power outages in economically robust areas and the restoration times for power outages in non-economically robust areas) are numerical. Since the two graphed distributions are roughly the same shape, Kolmogorov-Smirnov test statistic would be an inappropriate choice, and so difference in group means is an appropriate statistic.
+Test statistic: Difference in group means <- this test statistic is the best since the two distributions (the restoration times for power outages in economically robust areas and the restoration times for power outages in non-economically robust areas) are numerical. Since the two graphed distributions are roughly the same shape, the Kolmogorov-Smirnov test statistic would be an inappropriate choice, and so the difference in group means is an appropriate statistic.
 
-Signficance level: a=0.05 <- a good, practical threshold since it ensures that if the null hypothesis was true, there would only be a 5% chance you would see such extreme of a restoration time.
+Significance level: a=0.05 <- a good, practical threshold since it ensures that if the null hypothesis was true, there would only be a 5% chance you would see such extreme restoration time.
 
 Since the p-value is 0.086, which is greater than the previously set significance level of 0.05, we fail to reject the null hypothesis that power outages are not restored more quickly in economically robust areas.
+
 
 
 ### Framing a Prediction Problem
@@ -103,12 +104,12 @@ At the time of your prediction, you know the "PC.REALGSP.STATE", "TOTAL.SALES", 
 
 
 ### Baseline Model
-My model uses a RandomForestClassifier of max_depth=2 and criterion='entropy' in order to make my classification. A ColumnTransformer is used in order to make transformations in a single pipeline. My model has 2 features "NERC.REGION" and "CLIMATE.CATEGORY" which are used in order to make my classifications. Both are nominal, so I OneHotEncode them inside the column transformer and I could just passthrough "PCT_WATER_TOT". My mode did not perform too well, as it had a training accuracy of 0.5664845173041895 and a testing accuracy of 0.5081967213114754. My model is somewhat good in that my testing accuracy wasn't too far off from my training accuracy. However, I believe my current model could be better since it is only based on 2 features and a complex problem like multiclass classification should involve more of a broad spectrum of features.
+My model uses a RandomForestClassifier of max_depth=2 and criterion='entropy' in order to make my classification. A ColumnTransformer is used in order to make transformations in a single pipeline. My model has 2 features "NERC.REGION" and "CLIMATE.CATEGORY" which are used in order to make my classifications. Both are nominal, so I OneHotEncode them inside the column transformer and I could just passthrough "PCT_WATER_TOT". My mode did not perform too well, as it had a training accuracy of 0.5664845173041895 and a testing accuracy of 0.5081967213114754. My model is somewhat good in that my testing accuracy wasn't too far off from my training accuracy. However, I believe my current model could be better since it is only based on 2 features, and a complex problem like multiclass classification should involve more of a broad spectrum of features.
 
 ### Final Model
 The two other features I added were "MONTH" and "IND.SALES". I thought these were the best features to add to increase my accuracy since the MONTH it is often has a high effect on the conditions outside and since severe weather was the most common cause of power outages, I predicted that adding in MONTH as a feature could better my model, which it did! The other feature I purposefully decided to include was "IND.SALES". Since the industry sector often hogs up natural resources such as electricity consumption, I predicted that out of the 3 features related to the commercial sector, the residential sector, and the industry sector, the feature for the industry sector would be the most appropriate.
 
-The modeling algorithm I chose is once again using a RandomForestClassifier to perform classification. I utilized a ColumnTransformer to OneHotEncode as well as Binarize my features, my features this time building off of the features in my Baseline model as well as including a few more, one's that I hinted at in the conclusion of my Baseline construction as steps I could take to better my Baseline model. My model has become better after adding my new parameters as well as after being fit with the new hyperparameters. The hyperparameters my GridSearch outputted as being the best performing were a max_depth of 1, a min_samples_split of 5, and an n_estimators of 150. While my baseline model has a testing accuracy of 0.5081967213114754, my new Final Model has a testing accuracy of 0.644808743169399, a **more than 20% increase.**
+The modeling algorithm I chose is once again using a RandomForestClassifier to perform classification. I utilized a ColumnTransformer to OneHotEncode as well as Binarize my features, my features this time building off of the features in my Baseline model as well as including a few more, ones that I hinted at in the conclusion of my Baseline construction as steps I could take to better my Baseline model. My model has become better after adding my new parameters as well as after being fit with the new hyperparameters. The hyperparameters my GridSearch outputted as being the best performing were a max_depth of 1, a min_samples_split of 5, and an n_estimators of 150. While my baseline model has a testing accuracy of 0.5081967213114754, my new Final Model has a testing accuracy of 0.644808743169399, a **more than 20% increase.**
 
 
 ### Fairness Analysis
