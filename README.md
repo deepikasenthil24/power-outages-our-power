@@ -68,7 +68,14 @@ I believe that there are columns in this dataset that could be considered NMAR d
   frameborder="0"
 ></iframe>
 
-After performing a permutation test to see if the missing values in "Hurricanes" depends on "IND.SALES", I got a p-value of 0.114 while is greater than my set significance level of 0.05 and so it signifies that the missingness does not depend on the "IND.SALES". Above is a KDE plot representing the distrubution of IND.SALES when the hurrican name is missing and the distribution when it's not. Since the two graphs are different shapes, a Kolmogorov–Smirnov test statistic should be used!
+
+Null hypothesis: Missingness in hurr_name_missing does not depend on the IND.SALES column (MCAR)
+
+Alternative hypothesis: Missingness in hurr_name_missing does depend on the IND.SALES column (MAR)
+
+Significance level: 0.05
+
+After performing a permutation test to see if the missing values in "Hurricanes" depends on "IND.SALES", I got a p-value of 0.114, which is greater than my set significance level of 0.05, so I fail to reject my null hypothesis, which signifies that the missingness does not depend on the "IND.SALES". Above is a KDE plot representing the distrubution of IND.SALES when the hurricane name is missing and the distribution when it's not. Since the two graphs are different shapes, a Kolmogorov–Smirnov test statistic should be used!
 
 
 ### Hypothesis Testing
