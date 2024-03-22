@@ -39,16 +39,20 @@ This plot shows the distrbution of the causes of power outages in the dataset. M
 ></iframe>
 This plot shows the distribution in the durations of power outages. We can see that most power outages last less than 20k minutes (less than 14 days), but this plot also emphasizes the presense of many outliers in outage durations that should be kept in mind and/or investigated further
 
-| CLIMATE.CATEGORY | cold | normal | warm |
-|--------|-------|------|-------|
-| MONTH |       |      |       |
-| 1 | 0.59 | 0.19 | 0.22 |
-| 2 | 0.68 | 0.19 | 0.14 |
-| 3 | 0.19 | 0.51 | 0.30 |
-| ... | ... | ... | ... |
-| 10 | 0.29 | 0.38 | 0.34 |
-| 11 | 0.36 | 0.40 | 0.24 |
-| 12 | 0.41 | 0.23 | 0.36 |
+|   MONTH |      cold |   normal |      warm |
+|--------:|----------:|---------:|----------:|
+|       1 | 0.588235  | 0.191176 | 0.220588  |
+|       2 | 0.675676  | 0.189189 | 0.135135  |
+|       3 | 0.191489  | 0.510638 | 0.297872  |
+|       4 | 0.262295  | 0.57377  | 0.163934  |
+|       5 | 0.0909091 | 0.792208 | 0.116883  |
+|       6 | 0.164835  | 0.769231 | 0.0659341 |
+|       7 | 0.0795455 | 0.693182 | 0.227273  |
+|       8 | 0.402778  | 0.375    | 0.222222  |
+|       9 | 0.262295  | 0.508197 | 0.229508  |
+|      10 | 0.285714  | 0.375    | 0.339286  |
+|      11 | 0.355556  | 0.4      | 0.244444  |
+|      12 | 0.40625   | 0.234375 | 0.359375  |
 
 In this pivot table, you can see the distribtion of the number of power outages that occur in each climate region for each month. The number of outages that occur at the start and end of the year is higher for those in the cold climate region than in the normal or warm climate regions. However, a few months in, those in the normal climate region start having a higher porportion of power outages. The number of power outages in the warm climate region vary a lot less. Given that severe weather was the most common cause of power outages, it makes sense that those in colder climate categories might have more power outages in the winter months characterzied by their severe weather while warm climate areas arent characterized by such varying weather and thus have less varying power outage proportions.
 
