@@ -29,7 +29,7 @@ The data cleaning process is necessary to ensure a proper analysis. I first remo
   height="600"
   frameborder="0"
 ></iframe>
-This plot shows the distrbution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
+This plot shows the distribution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
 
 <iframe
   src="assets/xillis_count2.html"
