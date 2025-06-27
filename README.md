@@ -22,6 +22,7 @@ The data cleaning process is necessary to ensure a proper analysis. I first remo
 |       7 | MRO           | warm               | 2015-07-18 00:00:00 | 02:00:00            | 2015-07-19 00:00:00       | 07:00:00                  | severe weather     | nan                     |               nan |              1740 |              250 |               250000 |         10.43 |     1777937 |       5970339 |              54431 |                 1.7 |           4873 |          292023 |    91.5927 |         8.40733 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |        0 |
 
 
+![image](https://github.com/user-attachments/assets/31878493-c31e-4b00-ad27-1f5511f7a8aa)
 
 <iframe
   src="assets/xillis_count.html"
