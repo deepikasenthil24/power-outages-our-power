@@ -23,9 +23,9 @@ The data cleaning process is necessary to ensure a proper analysis. I first remo
 
 
 <img src="https://github.com/user-attachments/assets/df9f7532-418c-4734-a84d-b27b5c36203f" width="600"/>
-
+<br>
 This plot above shows the distribution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
-
+<br>
 
 
 <img src="https://github.com/user-attachments/assets/6ad5aace-6ca4-4461-8b87-daaf62d19177" width="600"/>
