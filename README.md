@@ -22,15 +22,15 @@ The data cleaning process is necessary to ensure a proper analysis. I first remo
 |       7 | MRO           | warm               | 2015-07-18 00:00:00 | 02:00:00            | 2015-07-19 00:00:00       | 07:00:00                  | severe weather     | nan                     |               nan |              1740 |              250 |               250000 |         10.43 |     1777937 |       5970339 |              54431 |                 1.7 |           4873 |          292023 |    91.5927 |         8.40733 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |        0 |
 
 
-![image](https://github.com/user-attachments/assets/31878493-c31e-4b00-ad27-1f5511f7a8aa)
+This plot below shows the distribution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
 
-<iframe
-  src="assets/xillis_count.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
-This plot shows the distribution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
+![image](https://github.com/user-attachments/assets/df9f7532-418c-4734-a84d-b27b5c36203f)
+
+
+This plot below shows the distribution in the durations of power outages. We can see that most power outages last less than 20k minutes (less than 14 days), but this plot also emphasizes the presense of many outliers in outage durations that should be kept in mind and/or investigated further
+
+![image](https://github.com/user-attachments/assets/6ad5aace-6ca4-4461-8b87-daaf62d19177)
+
 
 <iframe
   src="assets/xillis_count2.html"
@@ -38,7 +38,7 @@ This plot shows the distribution of the causes of power outages in the dataset. 
   height="600"
   frameborder="0"
 ></iframe>
-This plot shows the distribution in the durations of power outages. We can see that most power outages last less than 20k minutes (less than 14 days), but this plot also emphasizes the presense of many outliers in outage durations that should be kept in mind and/or investigated further
+
 
 |   MONTH |      cold |   normal |      warm |
 |--------:|----------:|---------:|----------:|
