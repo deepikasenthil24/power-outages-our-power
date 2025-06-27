@@ -25,18 +25,13 @@ The data cleaning process is necessary to ensure a proper analysis. I first remo
 <img src="https://github.com/user-attachments/assets/df9f7532-418c-4734-a84d-b27b5c36203f" width="600"/>
 This plot above shows the distribution of the causes of power outages in the dataset. More than half of all power outages can be attributed to severe weather, with the second most popular cause of outages being intentional attack.
 
-
+<p>&nbsp;</p>
 
 <img src="https://github.com/user-attachments/assets/6ad5aace-6ca4-4461-8b87-daaf62d19177" width="600"/>
 This plot above shows the distribution in the durations of power outages. We can see that most power outages last less than 20k minutes (less than 14 days), but this plot also emphasizes the presense of many outliers in outage durations that should be kept in mind and/or investigated further
 
+<p>&nbsp;</p>
 
-<iframe
-  src="assets/xillis_count2.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
 
 
 |   MONTH |      cold |   normal |      warm |
