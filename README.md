@@ -62,12 +62,10 @@ In this pivot table, you can see the distribution of the number of power outages
 I believe that there are columns in this dataset that could be considered NMAR due to this dataset focusing on the collection of power outage data for major power outages, particularly the total number of customers that were affected due to power outages. This is why the missing values in the "CUSTOMERS.AFFECTED" column are NMAR since the values that are missing likely aren't recorded because the actual value itself is too small. Additional data I might want to obtain to explain the missingness (making it MAR) could be a column that details whether the power outage is categorized as a "Major Power Outage" or a "Non-Major Power Outage", since that way you could say the missingness depends on the other column making it MAR.
 
 
-<iframe
-  src="assets/xillis_count6.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+![image](https://github.com/user-attachments/assets/499d79af-dfef-496d-9eb3-abf6fd032899)
+<img src="https://github.com/user-attachments/assets/499d79af-dfef-496d-9eb3-abf6fd032899" width="600"/>
+
+
 
 
 Null hypothesis: Missingness in hurr_name_missing does not depend on the IND.SALES column (MCAR)
